@@ -30,7 +30,7 @@ Try the app here: https://burgerbootcamp2018.herokuapp.com/
 
 ## Comments
 
-First app working with Express, Handlebars, ORM and first time configurating MySql in Heroku.
+First app working with Express, Handlebars, ORM and first time configurating MySQL in Heroku.
 
 ## Author
 
