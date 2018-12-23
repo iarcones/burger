@@ -1,34 +1,46 @@
 {{!-- my code here --}}
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Burger The Cast Arrays</h1>
-        <p class="lead">Order your burger, eat your burger, gain some pounds.</p>
-    </div>
-</div>
 
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         <div class="col">
-            <h2>New burgers!</h2>
-            <ul>
+            <h1 class="text-center pt-5 pb-3">Burger The Cast Arrays</h1>
+
+            <h2 class="text-center pt-3 pb-3">Order your burger 🍔🍟🍔🍟, eat your burger, gain some pounds</h2>
+        </div>
+    </div>
+
+    <div class="row pt-2 pb-5">
+        <div class="col">
+            <h2 class="text-center pt-3 pb-3 mb-4 backcol">New burgers!</h2>
+            <ul class="pl-5">
                 {{#each burgers}}
                 {{#unless devoured}}
                 <li>
-                    {{burger_name}}
-                    <button class="devour" data-id="{{this.id}}">DEVOUR IT!</button>
+                    <div class="row pb-2">
+                        <div class="col-9">
+                            {{burger_name}}
+                        </div>
+                        <div class="col-3">
+                            <button class="devour btn btn-warning btn-sm" data-id="{{this.id}}">Devour it!</button>
+                        </div>
+                    </div>
                 </li>
                 {{/unless}}
                 {{/each}}
             </ul>
         </div>
         <div class="col">
-            <h2>Burgers devoured!</h2>
-            <ul>
+            <h2 class="text-center pt-3 pb-3  mb-4 backcol">Burgers devoured!</h2>
+            <ul class="pl-5">
                 {{#each burgers}}
                 {{#if devoured}}
                 <li>
-                    {{burger_name}}
+                    <div class="row pb-2">
+                        <div class="col">
+                            {{burger_name}}
+                        </div>
+                    </div>
                 </li>
                 {{/if}}
                 {{/each}}
@@ -38,17 +50,18 @@
 
     <div class="row">
         <div class="col">
-            <h2>Add a Burger</h2>
-            <form class="create-form">
+            <h2 class="text-center pt-3 pb-3 mb-3 backcol">Add a Burger</h2>
+            <form class="create-form form-inline  mb-4 justify-content-center">
                 <div class="form-group">
-                    <label for="addburger">Burger Name:</label>
-                    <input type="text" id="addburger" name="name">
+                    <label class="mr-2" for="addburger">Burger Name:</label>
+                    <input type="text" class="form-control-sm" id="addburger" name="name">
                 </div>
-                <button type="submit">Add Burger</button>
+                <button class="btn btn-success btn-sm ml-3" type="submit">Add Burger</button>
             </form>
         </div>
     </div>
 </div>
+
 
 <script>
     // Make sure we wait to attach our handlers until the DOM is fully loaded.
